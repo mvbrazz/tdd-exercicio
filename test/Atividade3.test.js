@@ -217,7 +217,7 @@ describe('Atv3',()=>{
 
         var aux = verificaFuncionario(funcionario);
         
-        expect(aux.salario_liquido).toBe(1500);
+        expect(aux.salario_liquido).toBe(1600);
     });
 
     test('GERENTE com salário liquido correto menor que 5000',()=>{
@@ -231,7 +231,7 @@ describe('Atv3',()=>{
 
         var aux = verificaFuncionario(funcionario);
         
-        expect(aux.salario_liquido).toBe(850);
+        expect(aux.salario_liquido).toBe(3200);
     }); 
 
 })
