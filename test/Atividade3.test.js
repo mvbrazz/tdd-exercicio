@@ -75,7 +75,7 @@ describe('Atv3',()=>{
         expect(aux.tipo_salario).toBe(0);
     });
 
-    test('Desenvolvedor com salário menor que 2000',()=>{
+    test('DBA com salário menor que 2000',()=>{
         let funcionario = {};
         funcionario.nome = "Milena";
         funcionario.e_mail = "funcionario@gmail.com";
@@ -90,7 +90,7 @@ describe('Atv3',()=>{
         expect(aux.tipo_salario).toBe(1);
     });
 
-    test('Desenvolvedor com salário liquido correto maior  ou igual a 3000',()=>{
+    test('DBA com salário liquido correto maior  ou igual a 2000',()=>{
         let funcionario = {};
         funcionario.nome = "Milena";
         funcionario.e_mail = "funcionario@gmail.com";
@@ -104,7 +104,7 @@ describe('Atv3',()=>{
         expect(aux.salario_liquido).toBe(1500);
     });
 
-    test('Desenvolvedor com salário liquido correto menor que 3000',()=>{
+    test('DBA com salário liquido correto menor que 2000',()=>{
         let funcionario = {};
         funcionario.nome = "Milena";
         funcionario.e_mail = "funcionario@gmail.com";
