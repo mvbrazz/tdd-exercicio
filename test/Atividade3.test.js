@@ -118,6 +118,62 @@ describe('Atv3',()=>{
         expect(aux.salario_liquido).toBe(850);
     });
 
-    
+    test('TESTADOR com salário maior ou igual a 2000',()=>{
+        let funcionario = {};
+        funcionario.nome = "Milena";
+        funcionario.e_mail = "funcionario@gmail.com";
+        funcionario.salario_base=2000.00;
+        funcionario.salario_liquido=0;
+        funcionario.tipo_salario=0;
+        funcionario.cargo="TESTADOR";
+
+        var aux = verificaFuncionario(funcionario);
+        
+        expect(aux.cargo).toBe("TESTADOR");
+        expect(aux.tipo_salario).toBe(0);
+    });
+
+    test('TESTADOR com salário menor que 2000',()=>{
+        let funcionario = {};
+        funcionario.nome = "Milena";
+        funcionario.e_mail = "funcionario@gmail.com";
+        funcionario.salario_base=1000.00;
+        funcionario.salario_liquido=0;
+        funcionario.tipo_salario=0;
+        funcionario.cargo="TESTADOR";
+
+        var aux = verificaFuncionario(funcionario);
+        
+        expect(aux.cargo).toBe("TESTADOR");
+        expect(aux.tipo_salario).toBe(1);
+    });
+
+    test('TESTADOR com salário liquido correto maior  ou igual a 2000',()=>{
+        let funcionario = {};
+        funcionario.nome = "Milena";
+        funcionario.e_mail = "funcionario@gmail.com";
+        funcionario.salario_base=2000.00;
+        funcionario.salario_liquido=0;
+        funcionario.tipo_salario=0;
+        funcionario.cargo="TESTADOR";
+
+        var aux = verificaFuncionario(funcionario);
+        
+        expect(aux.salario_liquido).toBe(1500);
+    });
+
+    test('TESTADOR com salário liquido correto menor que 2000',()=>{
+        let funcionario = {};
+        funcionario.nome = "Milena";
+        funcionario.e_mail = "funcionario@gmail.com";
+        funcionario.salario_base=1000.00;
+        funcionario.salario_liquido=0;
+        funcionario.tipo_salario=0;
+        funcionario.cargo="TESTADOR";
+
+        var aux = verificaFuncionario(funcionario);
+        
+        expect(aux.salario_liquido).toBe(850);
+    });    
 
 })
