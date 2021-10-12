@@ -210,14 +210,14 @@ describe('Atv3',()=>{
         let funcionario = {};
         funcionario.nome = "Milena";
         funcionario.e_mail = "funcionario@gmail.com";
-        funcionario.salario_base=2000.00;
+        funcionario.salario_base=5000.00;
         funcionario.salario_liquido=0;
         funcionario.tipo_salario=0;
         funcionario.cargo="GERENTE";
 
         var aux = verificaFuncionario(funcionario);
         
-        expect(aux.salario_liquido).toBe(1600);
+        expect(aux.salario_liquido).toBe(3500);
     });
 
     test('GERENTE com salário liquido correto menor que 5000',()=>{
